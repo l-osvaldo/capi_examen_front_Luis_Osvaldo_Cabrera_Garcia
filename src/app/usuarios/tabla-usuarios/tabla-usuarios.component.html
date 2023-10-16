@@ -6,6 +6,15 @@
         <th>Domicilio</th>
     </thead>
     <tbody>
-        
+        <tr *ngFor="let item of data">
+            <td>{{ item.name }}</td>
+            <td>{{ item.fecha_nacimiento }}</td>
+            <td>{{ item.edad }} años</td>
+            <td>Domicilio:{{ item.domicilio.domicilio }} 
+                #{{ item.domicilio.numero_exterior }}, 
+                Col. {{ item.domicilio.colonia }}, 
+                C.P. {{ item.domicilio.cp }},
+                ciudad: {{ item.domicilio.ciudad }}</td>
+        </tr>
     </tbody>
 </table>
